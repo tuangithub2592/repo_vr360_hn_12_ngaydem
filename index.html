@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hà Nội 12 ngày đêm – Từ lòng đất đến bầu trời</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<style>
+:root{--red:#b3141b;--deep:#3a0807;--ink:#12060500;--night:#140605;--gold:#f6c928;--paper:#fff1c9;--muted:#e9d3a0;color-scheme:dark;
+--photo:url(data:image/jpeg;base64,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);
+--head:"Chakra Petch","Be Vietnam Pro",Impact,sans-serif;--body:"Be Vietnam Pro",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;height:100%;background:var(--night);color:var(--paper);font-family:var(--body)}
+#scroller{height:100%;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}#scroller::-webkit-scrollbar{display:none}
+header{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px clamp(14px,3vw,36px);padding-top:calc(12px + env(safe-area-inset-top,0px));background:rgba(58,8,7,.78);backdrop-filter:blur(6px);border-bottom:2px solid var(--gold)}
+.brand{display:flex;align-items:center;gap:12px;font:var(--hw,700) clamp(1rem,2.2vw,1.5rem)/1 var(--head);letter-spacing:.06em;color:var(--gold);text-transform:uppercase}
+.badge{width:42px;height:42px;flex:none;background:var(--red);border:2px solid var(--gold);display:grid;place-items:center}
+.badge svg{width:28px;height:28px}
+select{appearance:none;background:var(--deep) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23f6c928' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 14px center;color:var(--paper);border:1.5px solid var(--gold);border-radius:999px;padding:11px 40px 11px 18px;font:500 .95rem var(--body);min-width:min(240px,44vw)}
+select:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.prog{position:fixed;z-index:15;left:clamp(14px,3vw,36px);top:calc(84px + env(safe-area-inset-top,0px));width:min(340px,70vw);padding:12px 16px;background:rgba(58,8,7,.82);border:1.5px solid rgba(246,201,40,.6);border-radius:14px}
+.prog b{display:block;font:600 .9rem var(--body);margin-bottom:8px;color:var(--gold)}
+.bar{height:6px;background:rgba(255,241,201,.2);border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red),var(--gold));transition:width .35s}
+.slide{position:relative;flex:0 0 100%;width:100%;height:100%;min-height:100svh;scroll-snap-align:start;display:grid;place-items:center;overflow:hidden;padding:clamp(96px,14vh,150px) clamp(18px,8vw,120px)}
+.slide>svg.bg{position:absolute;inset:0;width:100%;height:100%}
+.slide::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,rgba(20,6,5,.72) 0,rgba(20,6,5,.35) 55%,rgba(20,6,5,.1) 100%);pointer-events:none}
+.copy{position:relative;z-index:5;max-width:1000px;text-align:center}
+.copy .date{display:inline-block;background:var(--red);color:var(--gold);border:2px solid var(--gold);padding:6px 18px;font:var(--hw,700) clamp(.95rem,2vw,1.3rem) var(--head);letter-spacing:.08em;margin-bottom:22px}
+h1,h2{margin:0;font:var(--hw,700) clamp(2.2rem,6.4vw,5.4rem)/1.08 var(--head);color:var(--paper);text-transform:uppercase;letter-spacing:.015em;text-shadow:0 3px 0 var(--red),0 6px 24px rgba(0,0,0,.8)}
+h2{font-size:clamp(1.8rem,4.4vw,3.6rem)}
+h1 em{display:block;font-style:normal;color:var(--gold);font-size:.62em;margin-top:.25em}
+.rule{display:flex;align-items:center;justify-content:center;gap:16px;width:min(260px,70%);margin:30px auto}.rule::before,.rule::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,transparent,var(--gold))}.rule::after{transform:scaleX(-1)}.rule svg{width:20px;height:20px;flex:none}
+.copy p{margin:0 auto;max-width:60ch;font-size:clamp(1rem,1.7vw,1.3rem);line-height:1.75;color:var(--paper);text-shadow:0 2px 12px rgba(0,0,0,.9)}
+.photo{position:absolute;inset:-12px;background:linear-gradient(180deg,rgba(35,12,10,.12),rgba(28,8,7,.38)),var(--photo) center/cover;background-blend-mode:normal;filter:blur(1.4px) contrast(1.06) brightness(.96)}
+.copy.long{text-align:left;max-width:900px;padding:16px 22px 8px 26px;border-left:4px solid var(--gold);background:rgba(20,6,5,.34);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);border-radius:4px;box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.slide.compact{padding-top:84px;padding-bottom:24px}.compact h2{font-size:clamp(1.4rem,2.8vw,2.2rem);line-height:1.4}.compact .rule{margin:4px auto 12px}.compact .copy{max-height:calc(100svh - 108px);overflow-y:auto;scrollbar-width:thin;padding-top:6px}.long h2{font-size:clamp(1.6rem,3.4vw,2.6rem)}
+.long .rule{margin:22px 0;width:min(220px,60%)}
+.long p{margin:0 0 .95em;max-width:none;font-size:clamp(.95rem,1.3vw,1.08rem);line-height:1.7}
+
+/* Styles for the big question text */
+.copy p.big-question {
+  font-size: clamp(1.8rem, 3.6vw, 2.7rem);
+  line-height: 1.6;
+  font-weight: 600;
+  margin-top: 0;
+  color: var(--paper);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.copy p {
+  margin: 0 auto;
+  max-width: 60ch;
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
+  line-height: 1.75;
+  color: var(--paper);
+  text-shadow: 0 2px 12px rgba(0,0,0,.9);
+  text-align: justify;
+}
+
+.src{display:block;margin-top:14px;font-size:.82rem;color:var(--muted)}
+.cv h2{font-size:clamp(2rem,5.6vw,4.8rem)}
+.tls{display:block;padding:calc(72px + env(safe-area-inset-top,0px)) 0 0}
+.tls .copy{max-width:none;width:100%;height:100%;display:flex;flex-direction:column;text-align:left}
+.tabs{position:relative;flex:none;display:flex;gap:10px;padding:clamp(10px,2.2vh,22px) clamp(12px,3vw,48px) 12px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab:first-child{margin-left:auto}.tab:last-child{margin-right:auto}
+.tab{flex:none;padding:9px 20px;border-radius:999px;background:rgba(58,8,7,.72);border:1.5px solid rgba(246,201,40,.28);color:var(--paper);font:var(--hw,700) .92rem var(--head);letter-spacing:.03em;cursor:pointer;transition:background .25s,border-color .25s,box-shadow .25s,transform .25s}
+.tab:hover{border-color:var(--gold)}
+.tab.pass{border-color:rgba(246,201,40,.6)}
+.tab.on{background:linear-gradient(180deg,#c4161d,#8a0f14);border-color:var(--gold);color:#fff;box-shadow:0 0 20px rgba(179,20,27,.75);transform:scale(1.06)}
+.stage{position:relative;flex:1;min-height:0;overflow:hidden;touch-action:pan-y;--cw:min(780px,80vw);--bd:clamp(72px,13vh,118px)}
+.tl-line{position:absolute;left:0;right:0;top:50%;height:4px;transform:translateY(-50%);transform-origin:left center;background:linear-gradient(90deg,#b3141b 0,#e8541f 24%,#f6c928 48%,rgba(246,201,40,.5) 72%,rgba(246,201,40,.1) 100%);box-shadow:0 0 16px rgba(246,201,40,.35)}
+.tl-track{position:absolute;left:0;top:0;bottom:0;display:flex;align-items:center;gap:clamp(36px,5vw,72px);transition:transform .7s cubic-bezier(.22,.8,.24,1);will-change:transform}
+.tc{position:relative;flex:none;width:var(--cw);opacity:.3;transform:scale(.93);filter:saturate(.7);transition:opacity .5s,transform .5s,filter .5s;cursor:pointer}
+.tc.on{opacity:1;transform:none;filter:none;cursor:default}
+.tlcard{text-align:left;max-height:clamp(230px,46vh,430px);overflow-y:auto;padding:clamp(14px,2.6vh,26px) clamp(16px,2.4vw,30px);background:rgba(24,7,6,.94);border:1px solid rgba(246,201,40,.55);border-left:6px solid var(--gold);border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.55);scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.tc.on .tlcard{box-shadow:0 0 34px rgba(246,201,40,.28),0 18px 50px rgba(0,0,0,.6)}
+.tc:not(.on) .tlcard{overflow:hidden}
+.tlhead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:12px}
+.tc-kick{font:700 clamp(.78rem,1.1vw,.95rem) var(--body);letter-spacing:.09em;text-transform:uppercase;color:var(--gold)}
+.tlcard h3{margin:6px 0 0;font:var(--hw,700) clamp(1.3rem,2.4vw,2.1rem)/1.12 var(--head);color:#fff;text-transform:uppercase;letter-spacing:.02em}
+.tlbtn{display:flex;gap:8px;flex:none}
+.tlbtn button{width:34px;height:34px;border-radius:50%;background:rgba(58,8,7,.8);border:1.5px solid var(--gold);color:var(--gold);font-size:1.2rem;line-height:1;cursor:pointer}
+.tlbtn button:hover{background:var(--gold);color:var(--deep)}
+.tlcard p{margin:0 0 .7em;max-width:none;text-align:left;font-size:clamp(.92rem,1.2vw,1.05rem);line-height:1.7;color:var(--paper)}
+.tlbody{display:flex;gap:clamp(14px,2vw,26px);align-items:flex-start}
+.tltxt{flex:1;min-width:0}
+.score{order:2;flex:0 0 clamp(150px,18vw,200px);padding:12px 10px;text-align:center;background:linear-gradient(180deg,rgba(179,20,27,.6),rgba(58,8,7,.75));border:1.5px solid var(--gold);border-radius:10px}
+.score .n{font:var(--hw,700) clamp(2.8rem,5.6vw,4.4rem)/1 var(--head);color:#ff7a3d;text-shadow:0 0 22px rgba(255,122,61,.6)}
+.score .l{margin-top:6px;font:700 .76rem/1.25 var(--body);letter-spacing:.05em;text-transform:uppercase;color:var(--gold)}
+.score .pls{display:flex;flex-wrap:wrap;justify-content:center;gap:2px;margin-top:10px}
+.score svg{width:32px;height:30px}
+.score .sub{margin-top:8px;font-size:.78rem;line-height:1.35;color:var(--paper)}
+.tlcard b.k{font-weight:800;color:#ffd34a;text-shadow:0 0 12px rgba(255,211,74,.35)}
+.tlcard b.k.f{color:#ff7a3d;text-shadow:0 0 14px rgba(255,122,61,.5)}
+.tlcard p.res{display:flex;gap:12px;align-items:flex-start;margin:0 0 12px;padding:10px 12px;background:rgba(179,20,27,.35);border-radius:8px;font-size:clamp(1rem,1.3vw,1.12rem);line-height:1.5;font-weight:600}
+.res .rt{flex:none;margin-top:2px;padding:3px 9px;background:var(--red);border:1px solid var(--gold);border-radius:4px;color:var(--gold);font:700 .7 rem var(--body);letter-spacing:.06em;text-transform:uppercase}
+.tlcard p.z{margin:12px 0 0;padding:10px 14px;border:1.5px solid var(--gold);background:rgba(246,201,40,.12);border-radius:8px;font-weight:700}
+.tc-badge{position:absolute;left:50%;width:var(--bd);height:var(--bd);margin-left:calc(var(--bd)/-2);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#1a0706;border:4px solid rgba(246,201,40,.7);color:var(--gold);z-index:2;transition:background .4s,border-color .4s,color .4s,box-shadow .4s}
+.tc-badge b{font:var(--hw,700) calc(var(--bd)*.36)/1 var(--head)}
+.tc-badge span{font:700 max(.6rem,calc(var(--bd)*.12)) var(--body);letter-spacing:.14em}
+.tc.dn .tc-badge{top:calc(100% - 12px)}
+.tc.up .tc-badge{bottom:calc(100% - 12px)}
+.tc.on .tc-badge{background:var(--red);border-color:#fff7dc;color:#fff;box-shadow:0 0 0 4px rgba(179,20,27,.55),0 0 36px rgba(255,60,40,.65)}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes tabin{from{opacity:0;transform:translateY(-10px)}}
+@keyframes stagein{from{opacity:0;transform:translateY(16px)}}
+@keyframes linein{from{transform:translateY(-50%) scaleX(0)}to{transform:translateY(-50%) scaleX(1)}}
+.tls.in .tab{animation:tabin .5s ease backwards;animation-delay:calc(var(--d,0)*60ms + .15s)}
+.tls.in .stage .tl-track{animation:stagein .8s ease .45s backwards}
+.tls.in .tl-line{animation:linein 1s ease .3s backwards}
+.tc.on .tlhead,.tc.on .tlbody{animation:up .45s ease both}
+.next,.prev{position:fixed;z-index:20;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;background:rgba(58,8,7,.75);border:2px solid var(--gold);color:var(--gold);font-size:1.45rem;cursor:pointer;transition:background .2s,color .2s}.next{right:clamp(14px,3vw,40px)}.prev{left:clamp(14px,3vw,40px)}
+.next:hover,.prev:hover{background:var(--gold);color:var(--deep)}
+.beam{transform-origin:50% 100%;animation:sway 9s ease-in-out infinite alternate}
+.beam:nth-of-type(2n){animation-duration:12s;animation-direction:alternate-reverse}
+@keyframes sway{from{transform:rotate(-3deg)}to{transform:rotate(3deg)}}
+.tr{stroke-dasharray:14 46;animation:tr 1.6s linear infinite}
+@keyframes tr{to{stroke-dashoffset:-60}}
+@media (max-width:640px){.next,.prev{top:auto;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:none;width:44px;height:44px}.slide{padding-block:clamp(110px,16vh,150px)}.tls{padding:calc(70px + env(safe-area-inset-top,0px)) 0 0}.stage{--cw:86vw;--bd:62px}.tab{padding:8px 15px;font-size:.82rem}.tlcard{max-height:clamp(240px,52vh,440px)}.tlbody{flex-direction:column}.score{order:0;flex:none;width:100%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 12px}.score .n{font-size:2.4rem}.score .pls{margin-top:0}.score svg{width:24px;height:22px}.tlcard p.res{flex-direction:column;gap:6px}}
+@media (prefers-reduced-motion:reduce){#scroller{scroll-behavior:auto}.beam,.tr{animation:none}.tls.in .tab,.tls.in .stage .tl-track,.tls.in .tl-line,.tc.on .tlhead,.tc.on .tlbody{animation:none}.tl-track,.tc{transition:none}}
+
+.chapter-tour {
+  width: 100%;
+  margin-top: 28px;
+  padding-bottom: 30px;
+}
+
+.tour-intro {
+  max-width: 850px;
+  margin: 0 auto 20px;
+}
+
+.tour-intro h3 {
+  color: var(--paper);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin: 12px 0;
+}
+
+.tour-intro p {
+  color: var(--paper);
+  line-height: 1.8;
+}
+
+.chapter-tour {
+  width: 100%;
+  max-width: 1500px;
+  margin: 44px auto 50px;
+  padding: 0 20px 30px;
+  box-sizing: border-box;
+}
+
+.tour-intro {
+  max-width: 1000px;
+  margin: 0 auto 26px;
+  text-align: center;
+}
+
+.tour-intro .date {
+  display: inline-block;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.tour-intro h3 {
+  color: var(--paper);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.3;
+  margin: 12px 0 16px;
+}
+
+.tour-intro p {
+  color: var(--paper);
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.tour-guide {
+  max-width: 1000px;
+  margin: 24px auto 28px;
+  padding: 18px 22px;
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  text-align: left;
+  line-height: 1.8;
+  color: var(--paper);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.tour-guide h4 {
+  margin: 0 0 10px;
+  color: var(--gold);
+  font-size: 1.05rem;
+}
+
+.tour-guide p {
+  margin: 7px 0;
+}
+
+.chapter-tour-frame {
+  width: 100%;
+  height: min(82vh, 900px);
+  min-height: 560px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  background: #080202;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.chapter-tour-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .chapter-tour {
+    padding: 0 10px 24px;
+    margin-top: 30px;
+  }
+
+  .chapter-tour-frame {
+    height: 72vh;
+    min-height: 430px;
+    border-radius: 8px;
+  }
+
+  .tour-guide {
+    padding: 14px;
+  }
+}
+
+/* Dedicated VR360 slide: keep instructions compact and make the tour visible. */
+.tour-slide {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: calc(88px + env(safe-area-inset-top, 0px)) 0 28px;
+  scroll-snap-align: start;
+  scrollbar-width: thin;
+}
+.tour-slide .copy {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+.tour-slide .chapter-tour {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 clamp(12px, 3vw, 36px) 24px;
+  box-sizing: border-box;
+}
+.tour-slide .tour-intro {
+  max-width: 900px;
+  margin: 0 auto 12px;
+}
+.tour-slide .tour-intro .date {
+  margin-bottom: 8px;
+  padding: 5px 14px;
+  font-size: clamp(.78rem, 1.4vw, 1rem);
+}
+.tour-slide .tour-intro h3 {
+  margin: 4px 0 8px;
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+}
+.tour-slide .tour-intro p {
+  max-width: 780px;
+  font-size: clamp(.88rem, 1.2vw, 1rem);
+  line-height: 1.5;
+}
+.tour-slide .tour-guide {
+  max-width: 1100px;
+  margin: 12px auto 14px;
+  padding: 10px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px 18px;
+  text-align: center;
+  font-size: clamp(.76rem, 1vw, .9rem);
+  line-height: 1.45;
+}
+.tour-slide .tour-guide strong {
+  color: var(--gold);
+  flex-basis: 100%;
+  font-size: .9rem;
+}
+.tour-slide .tour-guide span {
+  display: inline-block;
+}
+.tour-slide .chapter-tour-frame {
+  width: 100%;
+  height: min(68vh, 760px);
+  min-height: 420px;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .tour-slide {
+    padding-top: calc(82px + env(safe-area-inset-top, 0px));
+  }
+  .tour-slide .chapter-tour {
+    padding: 0 10px 20px;
+  }
+  .tour-slide .tour-intro p {
+    font-size: .86rem;
+  }
+  .tour-slide .tour-guide {
+    gap: 5px 10px;
+    padding: 9px 10px;
+  }
+  .tour-slide .chapter-tour-frame {
+    height: 62vh;
+    min-height: 360px;
+  }
+}
+
+/* VR360 dedicated child slide: no intro or instructions, maximize the embedded tour. */
+.tour-slide {
+  display: block !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  min-height: 100svh;
+  height: 100%;
+}
+.tour-slide::after {
+  display: none !important;
+}
+.tour-slide .copy {
+  position: absolute;
+  z-index: 6;
+  inset: 76px 0 0;
+  width: 100%;
+  max-width: none;
+  height: calc(100% - 76px);
+  margin: 0;
+  padding: 0;
+  text-align: initial;
+}
+.tour-slide .chapter-tour {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.tour-slide .chapter-tour-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: #080202;
+}
+.tour-slide .chapter-tour-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (max-width: 640px) {
+  .tour-slide .copy {
+    inset: 70px 0 0;
+    height: calc(100% - 70px);
+  }
+}
+
+/* T1 info panel lives inside the VR360 slide frame. */
+.chapter-tour-frame { position: relative; }
+
+/* Chương 4 – trang con: chữ nằm bên phải, chừa khoảng trái cho ảnh bác Hiển */
+.slide.memo{place-items:center end;padding:clamp(84px,12vh,120px) clamp(96px,9vw,150px) clamp(28px,5vh,56px) clamp(96px,9vw,150px)}
+.memo-copy{width:min(620px,54vw);max-width:none;max-height:calc(100svh - clamp(130px,18vh,190px));overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--gold) transparent;background:rgba(20,6,5,.66);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);padding:20px 24px 10px 26px}
+.memo-copy p{margin:0 0 .9em;max-width:none;font-size:clamp(.9rem,1.12vw,1.04rem);line-height:1.65;text-align:justify}
+.memo-copy p.quote{padding-left:14px;border-left:2px solid rgba(246,201,40,.55);font-style:italic;color:var(--muted)}
+.memo-img{position:absolute;z-index:4;left:clamp(96px,9vw,150px);top:clamp(84px,12vh,120px);bottom:clamp(28px,5vh,56px);width:min(34vw,480px);background:center/cover no-repeat;border-radius:10px;box-shadow:0 8px 28px rgba(0,0,0,.45);display:grid;place-items:center;text-align:center}
+.memo-img:empty,.memo-img:has(span){border:2px dashed rgba(246,201,40,.5);background-color:rgba(20,6,5,.35);box-shadow:none}
+.memo-img span{color:var(--muted);font:500 .95rem/1.5 var(--body);padding:12px}.memo-img small{opacity:.7}
+.slide.memo.solo{place-items:center;padding-inline:clamp(96px,9vw,150px)}
+.memo.solo .memo-copy{width:min(860px,100%);padding:24px 30px 14px 32px}
+.memo.solo .memo-copy p{font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.75}
+.slide.memo.flip{place-items:center start}
+.memo.flip .memo-img{left:auto;right:clamp(96px,9vw,150px)}
+@media (max-width:760px){
+ .slide.memo.solo{justify-content:center;padding-inline:16px}
+ .memo.solo .memo-copy{padding:18px 18px 8px 20px}
+ .slide.memo{display:flex;flex-direction:column;justify-content:flex-start;gap:12px;padding:84px 16px 84px}
+ .memo-img{position:static;flex:none;width:100%;height:26vh}
+ .memo-copy{width:100%;flex:1;min-height:0;max-height:none}
+ .memo.solo .memo-copy{flex:none;max-height:calc(100svh - 170px)}
+}
+</style>
+<link rel="stylesheet" href="static/custom-t1-info.css?v=11">
+<script defer src="static/custom-t1-info.js?v=11"></script>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="badge"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon fill="#f6c928" points="50,6 61,38 95,38 67,58 78,92 50,71 22,92 33,58 5,38 39,38"/></svg></span>Hà Nội 12 ngày đêm</div>
+  <select id="jump" aria-label="Chuyển nhanh tới phần"></select>
+</header>
+<button class="prev" id="prev" aria-label="Phần trước">←</button>
+<button class="next" id="next" aria-label="Phần tiếp theo">→</button>
+<main id="scroller"></main>
+
+<script>
+const S=[
+{n:"Mở đầu",d:"18 – 29 tháng 12 năm 1972",t:"Hà Nội 12 ngày đêm",sub:"Từ lòng đất đến bầu trời",p:"",sc:{beams:7,planes:[[420,200,.8,12],[1100,140,.6,-8]],tr:6,fig:1}},
+{n:"Bối cảnh",child:1,notitle:1,img:true,p:"Năm 1972, khi đàm phán hòa bình tại Paris rơi vào bế tắc, chính quyền Tổng thống Mỹ Richard Nixon mở chiến dịch tập kích đường không chiến lược Linebacker II nhằm gây sức ép buộc Việt Nam Dân chủ Cộng hòa chấp nhận các điều kiện đàm phán của Mỹ. Hà Nội và Hải Phòng trở thành những mục tiêu trọng điểm của chiến&nbsp;dịch.\nTháng 12/1972, Hà Nội bước vào một trong những thời khắc khốc liệt nhất của cuộc kháng chiến chống Mỹ. Trong 12 ngày đêm, từ ngày 18 đến ngày 29/12, quân đội Mỹ sử dụng máy bay B-52 cùng nhiều loại máy bay chiến thuật tập kích Hà Nội, Hải Phòng và một số địa phương miền Bắc, gây tổn thất nặng nề về người và tài sản.\nNhưng câu chuyện ấy không chỉ diễn ra trên bầu trời. Phía sau các trận đánh là hoạt động chỉ huy căng thẳng và những chứng tích chiến tranh còn được lưu giữ đến hôm&nbsp;nay.",sc:{}},
+{n:"Câu hỏi mở",child:1,notitle:1,p:"<p class=\"big-question\">Điều gì đã diễn ra phía sau những trận đánh trên bầu trời Hà Nội suốt 12 ngày đêm, những chứng tích lịch sử hiện còn lại đã viết lại câu chuyện ấy như thế&nbsp;nào?</p>",sc:{}},
+{n:"Chương 1: Hầm tác chiến T1",bg:"hamt1backslide.jpg",d:"Chương 1 · Tối 18/12/1972",t:"Hầm tác chiến T1 – Những đêm không ngủ dưới lòng đất",p:"Dưới lòng Hoàng thành Thăng Long có căn hầm chỉ huy tác chiến T1 của Bộ Tổng Tham mưu. Tối 18/12/1972, những hồi còi báo động đầu tiên cho toàn thành phố được phát đi từ đây, trước khi B-52 tới khoảng 35 phút. Suốt 12 ngày đêm, cán bộ và chiến sĩ trực ban ở đây gần như không chợp mắt.",sc:{beams:4,tr:3,bunker:1}},
+{n:"Trải nghiệm VR360: Hầm tác chiến T1",d:"Chương 1 · Trải nghiệm không gian 360°",t:"Khám phá hầm chỉ huy T1",p:"",tour:true,sc:{}},
+{n:"Chương 2: 12 ngày đêm trên bầu trời Hà Nội",d:"Chương 2 · Diễn biến lịch sử",t:"12 ngày đêm trên bầu trời Hà Nội",p:"",cv:1,sc:{beams:8,planes:[[560,170,.8,6],[1250,120,.6,-6]],tr:14,burst:1,fall:1}},
+{n:"Chương 2: Dòng thời gian 12 ngày đêm",child:1,d:"Diễn biến lịch sử · 18 – 29/12/1972",t:"Dòng thời gian 12 ngày đêm",p:"",tl:[
+{h:"Đêm 18 ngày 19/12",g:"Mở màn cuộc tập kích",s:"18–19/12",p:["Quân chủng Phòng không – Không quân chuyển cấp sẵn sàng chiến đấu. Ra-đa phát hiện B-52 từ tối 18/12; lúc 19 giờ 44 phút, tên lửa phòng không khai hỏa. B-52 liên tiếp ném bom Hà Nội, mở đầu 12 ngày đêm chiến đấu bảo vệ Thủ đô."],r:"Quân và dân ta anh dũng chiến đấu, bắn rơi **8 máy bay** các loại, trong đó có **3 máy bay B-52**.",k:{n:3}},
+{h:"Đêm 19 ngày 20/12",g:"Tập kích nhiều địa bàn",s:"19–20/12",p:["B-52 tiếp tục đánh phá Hà Nội, Hải Phòng, Bắc Giang, Thái Nguyên và Nam Định. Riêng Hà Nội, địch sử dụng 87 lượt B-52 cùng hơn 200 lượt máy bay cường kích, ném bom nhiều điểm ở nội và ngoại thành."],r:"Các lực lượng phòng không ba thứ quân của ta đã anh dũng chiến đấu, bắn rơi **2 máy bay B-52**; **5 máy bay** các loại.",k:{n:2}},
+{h:"Đêm 20 ngày 21/12",g:"Trận đánh đạt hiệu quả cao",s:"20–21/12",p:["Từ 19 giờ 27 phút, B-52 tiếp tục cường kích đánh phá Hà Nội và các mục tiêu ở Hải Phòng, Thái Nguyên. Sau khi rút kinh nghiệm từ những trận trước, lực lượng phòng không đánh trả quyết liệt, sử dụng 35 quả đạn tên lửa bắn rơi **7 B-52**, trong đó **5 chiếc rơi tại chỗ**.","Rút kinh nghiệm các trận đánh trước, quân và dân ta đã anh dũng, mưu trí, lập công xuất sắc: chỉ với 35 quả đạn đã bắn rơi **7 chiếc B-52** (có 5 chiếc rơi tại chỗ). Đại đội tự vệ của 3 nhà máy (Cơ khí Mai Động, Gỗ Hà Nội và Cơ khí Lương Yên), bằng 19 viên đạn 14,5 mm đã bắn hạ **1 máy bay F-111** “cánh cụp cánh xòe” của địch."],r:"Đêm 20 ngày 21/12, quân và dân ta đã bắn hạ **7 máy bay B-52** và **8 máy bay** các loại.",k:{n:7,sub:"5 chiếc rơi tại chỗ"}},
+{h:"Đêm 21 ngày 22/12",s:"21–22/12",p:["Mỹ huy động 24 lượt B-52 và 36 lượt máy bay chiến thuật đánh phá các mục tiêu trọng yếu tại Hà Nội cùng một số khu vực ở Bắc Giang, Hải Phòng. Các lực lượng phòng không tiếp tục chiến đấu, bảo vệ mục tiêu trước những đợt tập kích."]},
+{h:"Đêm 22 ngày 23/12",g:"Bom đạn trút xuống Hà Nội",s:"22–23/12",p:["Ban ngày 23/12, địch sử dụng 54 lần chiếc máy bay chiến thuật đánh phá các khu vực ngoại thành Hà Nội; ban đêm, địch sử dụng 33 chiếc B-52 đánh Đồng Mỏ (Lạng Sơn) và khu vực Bắc Giang; 30 máy bay F-4 và F-105 và 7 máy bay chiến thuật của Hải quân, 11 máy bay F-111 đánh phá các sân bay: Nội Bài, Yên Bái, Kiến An (Hải Phòng) và một số mục tiêu tại Hà Nội, Hải Phòng, Quảng Ninh."],r:"Ta bắn rơi **5 máy bay**, trong đó có **2 chiếc B-52**; **3 máy bay chiến thuật**.",k:{n:2}},
+{h:"Đêm 23 ngày 24/12",s:"23–24/12",p:["B-52 đánh Đồng Mỏ, Bắc Giang; các máy bay chiến thuật tiếp tục tập kích sân bay và mục tiêu tại Hà Nội, Hải Phòng, Quảng Ninh. Lực lượng phòng không duy trì chiến đấu trên nhiều hướng."],r:"Quân ta bắn hạ **1 máy bay B-52**, **5 máy bay chiến thuật**.",k:{n:1}},
+{h:"Từ 24 giờ ngày 24 đến ngày 25/12",s:"24–25/12",p:["Đêm 24/12, Mỹ tiếp tục tập kích các mục tiêu tại Bắc Giang và khu vực Hà Nội. Đến 24 giờ, cuộc tập kích tạm ngừng nhân dịp Noel.","Ngày 25/12, Bộ Chính trị và Quân ủy Trung ương nhận định địch có thể đánh trở lại dữ dội hơn; các đơn vị tranh thủ thời gian để rút kinh nghiệm, củng cố lực lượng và chuẩn bị phương án chiến đấu."]},
+{h:"Ngày 26/12",s:"26/12",p:["Từ 13 giờ 00 đến tối, địch ném bom dội các khu vực trận địa tên lửa và trạm biến thế Đông Anh."],r:"Quân ta bắn hạ **2 máy bay tác chiến** của địch.",k:{n:2,l:"máy bay tác chiến bị bắn hạ",t:1}},
+{h:"Đêm 26 ngày 27/12",s:"26–27/12",p:["Từ 22 giờ 05 đến 23 giờ 20 phút, Mỹ huy động 105 lượt B-52 cùng 110 lượt máy bay chiến thuật hộ tống đánh phá Hà Nội, Hải Phòng, Thái Nguyên. Hà Nội chịu bom rải thảm, trong đó có khu phố Khâm Thiên và khu vực Hai Bà Trưng."],r:"**8 máy bay B-52** và **10 máy bay chiến thuật** bị ta bắn rơi.",k:{n:8}},
+{h:"Đêm 27 ngày 28/12",s:"27–28/12",p:["Mỹ cho 54 chiếc máy bay B-52, 183 ca máy bay chiến thuật hộ tống và F-111 tập trung đánh phá Hà Nội."],r:"Quân và dân miền Bắc chiến đấu quyết liệt và bắn hạ được **5 chiếc B-52** và **2 chiếc máy bay chiến thuật**.",k:{n:5}},
+{h:"Đêm 28 ngày 29/12",s:"28–29/12",p:["Ban đêm, địch sử dụng khoảng 60 chiếc B-52 đánh vào các mục tiêu ở khu vực nội, ngoại thành Hà Nội."],r:"Quân và dân ta tiếp tục chiến đấu dũng cảm, bắn rơi **3 máy bay**, trong đó có **2 chiếc B-52** (1 chiếc do phi công Vũ Xuân Thiều lái chiếc máy bay MiG-21 tiêu diệt và đã anh dũng hy sinh); **1 chiếc RA-5C**.",k:{n:2,sub:"1 chiếc do phi công Vũ Xuân Thiều lái MiG-21 tiêu diệt"}},
+{h:"Đêm 29 ngày 30/12",s:"29–30/12",p:["Do bị tổn thất nặng nề trong 11 ngày liên tiếp, máy bay B-52 của địch chỉ đánh một số địa phương vòng ngoài, không dám tập trung lực lượng ở tọa độ lửa Hà Nội nữa.","Ban ngày, địch sử dụng 36 lần chiếc máy bay chiến thuật; ban đêm, địch huy động 60 lần chiếc B-52, 70 lần chiếc máy bay chiến thuật công kích các mục tiêu ở Thái Nguyên, Lạng Sơn, Vĩnh Phú, Thanh Hóa và ngoại vi Hải Phòng, Quảng Ninh."],r:"Các đơn vị phòng không ngoài của ta (tiểu đoàn 72, 78, 79) đã bắn rơi **2 máy bay** (**1 chiếc B-52**, **1 chiếc F-4**).",k:{n:1},z:"Đây là trận đánh kết thúc thắng lợi 12 ngày đêm bảo vệ Thủ đô Hà Nội nói riêng và miền Bắc nói chung cuối tháng 12/1972."}
+],sc:{beams:8,planes:[[560,170,.8,6],[1250,120,.6,-6]],tr:14,burst:1}},
+{n:"Chương 3: Những chứng tích còn lại",bg:"baotangb52backslide.jpg",d:"Chương 3",t:"Những chứng tích còn lại",p:"Hơn nửa thế kỷ trôi qua, những chứng tích lịch sử vẫn hiện diện giữa lòng Thủ đô. Bảo tàng Chiến thắng B-52 nay lưu giữ trọn vẹn ký ức hào hùng của quân và dân ta. Tại hồ Hữu Tiệp, xác chiếc B-52 bị bắn rơi vẫn nằm đó như một minh chứng thép. Còn ở Khâm Thiên, nơi bom rải thảm đêm 26/12, tượng đài tưởng niệm vẫn luôn là lời nhắc nhở khôn nguôi về nỗi đau và khát vọng hòa bình.",sc:{beams:3,ruin:1,tr:2}},
+{n:"Trải nghiệm VR360: Bảo tàng Chiến thắng B-52",d:"Chương 3 · Trải nghiệm không gian 360°",t:"Khám phá Bảo tàng Chiến thắng B-52",p:"",tour:true,tourSrc:"outminhvr360/out/index.html",tourTitle:"Bảo tàng Chiến thắng B-52 – Tour 360° có thuyết minh",sc:{}},
+{
+  n: "Hồ Hữu Tiệp",
+  child: 1,
+  compact: 1, t: "Hồ Hữu Tiệp",
+  p: "<div style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 700px; margin: 0 auto;\"><img src=\"ảnh chuog 3.jpg\" alt=\"Xác B-52 tại Hồ Hữu Tiệp\" style=\"width: 55%; max-width: 420px; height: auto; max-height: 200px; object-fit: cover; border-radius: 10px; margin: 0 auto 8px; display: block; box-shadow: 0 6px 20px rgba(0,0,0,0.6);\"><p style=\"font-size: clamp(0.9rem, 1.2vw, 1.05rem); line-height: 1.6; text-align: justify; text-wrap: balance; margin: 0;\">Nằm bình yên giữa làng hoa Ngọc Hà, hồ Hữu Tiệp lưu giữ xác chiếc siêu pháo đài bay B-52G bị bộ đội tên lửa bắn rơi tại chỗ vào đêm 27/12/1972. Khối kim loại khổng lồ gỉ sét vươn lên khỏi mặt nước không chỉ là chiến tích tự hào của lực lượng phòng không Hà Nội, mà còn là một minh chứng lịch sử sống động cho sự thất bại thảm hại của chiến dịch Linebacker II.</p></div>",
+  sc: { beams: 2, ruin: 1 }
+},
+{
+  n: "Phố Khâm Thiên",
+  child: 1,
+  compact: 1, t: "Phố Khâm Thiên",
+  p: "<div style=\"display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 700px; margin: 0 auto;\"><img src=\"khamthienanh1.jpg\" alt=\"Phố Khâm Thiên đổ nát sau bom B-52\" style=\"width: 55%; max-width: 420px; height: auto; max-height: 200px; object-fit: cover; border-radius: 10px; margin: 0 auto 8px; display: block; box-shadow: 0 6px 20px rgba(0,0,0,0.6);\"><p style=\"font-size: clamp(0.9rem, 1.2vw, 1.05rem); line-height: 1.6; text-align: justify; text-wrap: balance; margin: 0 0 10px;\">Trước tháng 12/1972, Khâm Thiên vốn là một trong những khu phố đông đúc và sầm uất bậc nhất Hà Nội, nơi tập trung nhịp sống sinh hoạt bình dị của đông đảo các tầng lớp nhân dân lao động, tiểu thương, công nhân.</p><p style=\"font-size: clamp(0.9rem, 1.2vw, 1.05rem); line-height: 1.6; text-align: justify; text-wrap: balance; margin: 0;\">Thế nhưng, trong chiến dịch tập kích chiến lược đường không bằng B-52 của đế quốc Mỹ, khu vực này đã trở thành một trọng điểm bị oanh tạc tàn khốc. Chỉ tính riêng trong đêm 26/12/1972, từng loạt bom rải thảm với sức công phá kinh hoàng đã trút trực diện xuống tuyến phố chật hẹp này. Hàng ngàn tấn bom đạn đã biến một khu dân cư đông đúc thành một hố sâu gạch vụn chỉ trong tích tắc, san phẳng cả một dải phố dài và gây ra tổn thất vô cùng nặng nề về người.</p></div>",
+  sc: { beams: 3, ruin: 1 }
+},
+{n:"Chương 4: Những ký ức không thể quên",d:"Chương 4",t:"Những ký ức không thể quên",p:"Tiếng loa gọi “Đồng bào ơi, xuống hầm đi”, đêm lạnh trên trận địa, tiếng nổ và ánh lửa trên trời vẫn nằm trong ký ức của người đã sống qua những ngày ấy. Ngày 29/12 cuộc ném bom kết thúc. Ngày 27/1/1973, Hiệp định Paris được ký. Cụm từ “Điện Biên Phủ trên không” xuất hiện lần đầu trên Báo Nhân Dân ngày 29/12/1972. Mọi việc đã kết thúc nhưng những mất mát do chiến tranh gây ra vẫn còn đó.",sc:{dawn:1,flag:1}},
+/* ===== Chương 4: các trang con. Chèn ảnh bác Hiển: điền tên file vào photo:"..." ===== */
+{n:"Chương 4: Mở đầu phần ký ức",child:1,notitle:1,long:1,memo:1,solo:1,p:"Trong chiến dịch tập kích chiến lược đường không bằng B-52 của đế quốc Mỹ (từ ngày 18 đến 30/12/1972), không quân Mỹ đã huy động 444 lần chiếc máy bay chiến lược B-52 cùng hơn 1.000 lần chiếc máy bay chiến thuật. Lực lượng này đã trút xuống Thủ đô Hà Nội và các vùng lân cận hơn 10.000 tấn bom đạn. Với mật độ tàn phá khốc liệt lên tới 33,33 tấn bom/km², chiến dịch đã gây ra những tổn thất vô cùng nặng nề về cả người và tài sản.",sc:{beams:4,tr:6,burst:1}},
+{n:"Chương 4: Đêm 27/12/1972",child:1,notitle:1,long:1,memo:1,photo:"anhbachien.Jpg",p:"Đằng sau những chiến công lẫy lừng của lực lượng phòng không trên bầu trời là những mất mát, hy sinh vô cùng to lớn và đau đớn hằn sâu dưới mặt đất. Trong ký ức của bác Đoàn Thị Hiển, cô gái thanh niên xung phong 19 tuổi vừa mới về làm dâu chưa đầy ba tháng tại phường Ngọc Hà, đêm 27/12/1972 mãi mãi là một vết thương không bao giờ lành.\n<p class=\"quote\">“Lúc đó, 9 giờ tối là báo động, bác đang ở hầm gần nhà, đến 9h30 hết báo động... Khi có lệnh báo động lần hai vào lúc 11 giờ đêm, hai vợ chồng sang trú nhờ ở hầm nhà hàng xóm thì bom đạn ập xuống. Căn hầm bị sập hoàn toàn. Chị chồng bác - một người phụ nữ chuẩn bị bước vào ngày cưới - đã vĩnh viễn ra đi. Người anh chồng - một bộ đội tiếp tế lương thực đang làm nhiệm vụ - cũng hy sinh ngay trong đống đổ nát ấy. Giữa lằn ranh sinh tử, may mắn thay người bố chồng vẫn kịp thoát nạn”.</p>",sc:{beams:2,ruin:1}},
+{n:"Chương 4: Cứu hầm giữa khói lửa",child:1,notitle:1,long:1,memo:1,photo:"anhbachien2.Jpg",p:"Mất mát quá lớn ập xuống gia đình khi tuổi đời hãy còn rất trẻ, nhưng tiếng gọi của Tổ quốc và trách nhiệm của một người dân quân tự vệ không cho phép cô gái 19 tuổi ấy được phép gục ngã. Gạt đi giọt nước mắt xé lòng và cơn sốc tột cùng, bác Hiển cùng đồng đội ngay lập tức lao vào tâm lửa để thực hiện nhiệm vụ cứu sập hầm.\nTrong ký ức của những người lính cứu hộ năm ấy, phố Khâm Thiên và các vùng lân cận như Ngọc Hà, Nhật Tân hiện ra trong một khung cảnh bi thương tột độ. Phố Khâm Thiên lúc bấy giờ đã bị bom B-52 cày xới đến mức tan hoang, biến dạng hoàn toàn, đến nỗi không còn lối đi để có thể tiếp cận và cứu những nạn nhân còn mắc kẹt trong các căn hầm sập. Giữa khói lửa ngút trời, sự rắn rỏi, kiên cường của những người phụ nữ Thủ đô đã trở thành một thứ \"thép\" sáng ngời giữa đời thường.",sc:{ruin:1,tr:2}},
+{n:"Chương 4: Hơn nửa thế kỷ sau",child:1,notitle:1,long:1,memo:1,flip:1,photo:"phuongngocha (1).png",p:"Hơn nửa thế kỷ trôi qua, những hố bom năm xưa nay đã liền sẹo. Bác Hiển chính là một trong những chứng nhân lịch sử từng tận mắt nhìn thấy chiếc máy bay B-52 bốc cháy dữ dội rồi rơi xuống lòng hồ Hữu Tiệp ngay tại quê hương mình.\nĐi qua tro tàn chiến tranh, người dân Hà Nội không chỉ kiên cường giữ đất mà còn bền bỉ gom góp lại từng viên gạch vụn để dựng xây cuộc sống mới. Gắn bó 15 năm với công tác tổ dân phố từ năm 2009 đến nay, chứng kiến từng đổi thay của làng hoa Ngọc Hà từ một vùng đất chịu nhiều đau thương vươn lên trở thành một khu dân cư chỉn chu, tiến bộ và yên bình, bác Hiển chia sẻ đó là niềm hạnh phúc lớn lao nhất.",sc:{dawn:1}},
+{n:"Chương 4: Lời kết",child:1,notitle:1,long:1,memo:1,solo:1,p:"12 ngày đêm lịch sử của mùa đông năm 1972 đã lùi vào quá khứ, nhưng âm hưởng hào hùng và những ký ức không thể nào quên ấy vẫn trường tồn cùng năm tháng. Từ trong tro tàn và đau thương tột cùng của chiến tranh, quân và dân Hà Nội nói riêng cùng nhân dân Việt Nam nói chung đã viết nên bản anh hùng ca bất tử về ý chí sắt đá, lòng quả cảm và khát vọng hòa bình. Những hy sinh thầm lặng dưới mặt đất và chiến công lẫy lừng trên bầu trời mãi mãi là ngọn lửa thiêng liêng, nhắc nhở thế hệ hôm nay và mai sau trân trọng từng phút giây hòa bình, tiếp tục giữ gìn và xây dựng Tổ quốc ngày càng giàu đẹp, văn minh.",sc:{dawn:1}}
+];
+const $=(s,r=document)=>r.querySelector(s);
+const star=(x,y,r,f)=>{let p=[];for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,q=i%2?r*.382:r;p.push((x+q*Math.cos(a)).toFixed(1)+","+(y+q*Math.sin(a)).toFixed(1))}return `<polygon fill="${f}" points="${p.join(" ")}"/>`};
+const defs=`<defs>
+<linearGradient id="skyN" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b0303"/><stop offset=".6" stop-color="#3a0807"/><stop offset="1" stop-color="#8f1a12"/></linearGradient>
+<linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d0f14"/><stop offset=".55" stop-color="#d4421a"/><stop offset="1" stop-color="#f6c928"/></linearGradient>
+<linearGradient id="bm" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffe9a0" stop-opacity=".7"/><stop offset="1" stop-color="#ffe9a0" stop-opacity=".04"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#ffb43a" stop-opacity=".9"/><stop offset="1" stop-color="#ff5a1a" stop-opacity="0"/></radialGradient>
+<g id="b52"><path d="M-4,-52L4,-52L5,40L-5,40Z"/><path d="M-4,-8L-78,30L-78,40L-4,18L4,18L78,40L78,30L4,-8Z"/><path d="M-4,38L-22,54L-22,58L-4,50L4,50L22,58L22,54L4,38Z"/></g></defs>`;
+function scene(c){
+ let o=`<svg class="bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${defs}<rect width="1600" height="900" fill="url(#${c.dawn?'skyD':'skyN'})"/>`;
+ if(!c.dawn){for(let i=0;i<60;i++)o+=`<circle cx="${(i*263)%1600}" cy="${(i*149)%420}" r="${i%5?1:1.8}" fill="#ffe9a0" opacity=".5"/>`}
+ if(c.dawn)o+=`<circle cx="800" cy="640" r="260" fill="url(#glow)"/>`+star(800,300,95,"#f6c928");
+ for(let i=0;i<(c.beams||0);i++){const x=120+i*(1360/Math.max(c.beams-1,1)),t=x+((i*131)%420)-210;o+=`<polygon class="beam" fill="url(#bm)" points="${x-10},900 ${x+10},900 ${t+70},0 ${t-70},0"/>`}
+ (c.planes||[]).forEach(p=>o+=`<use href="#b52" fill="#080202" stroke="#f6c92855" transform="translate(${p[0]},${p[1]}) rotate(${p[3]}) scale(${p[2]})"/>`);
+ for(let i=0;i<(c.tr||0);i++){const x=90+(i*937)%1420;o+=`<line class="tr" x1="${x}" y1="900" x2="${x+((i*71)%300)-150}" y2="${120+(i*53)%280}" stroke="${i%2?'#ff4a2a':'#ffd34a'}" stroke-width="3" style="animation-delay:${(i%7)*.23}s"/>`}
+ if(c.burst)for(let i=0;i<7;i++){const x=200+i*200,y=120+(i*97)%260;o+=`<circle cx="${x}" cy="${y}" r="${26+i%3*10}" fill="url(#glow)"/>`}
+ if(c.fall)o+=`<g transform="translate(780,330) rotate(-38)"><path d="M0,-30C-120,-60 -420,-160 -700,-260L-700,-200C-420,-110 -120,0 0,40Z" fill="#ff7a1a" opacity=".55"/><circle r="70" fill="url(#glow)"/><use href="#b52" fill="#080202" transform="scale(.9)"/></g><path d="M400,100C500,260 640,160 700,330" stroke="#1a0c0a" stroke-width="44" fill="none" opacity=".6"/>`;
+ // Lower decoration: aircraft formations and flight paths instead of temple/pagoda silhouettes.
+ const planeFill = c.ruin ? "#160706" : "#090706";
+ o+=`<g aria-hidden="true">
+   <path d="M70 820 Q360 760 650 820 T1230 820 T1600 790" fill="none" stroke="#f6c928" stroke-opacity=".16" stroke-width="2" stroke-dasharray="7 12"/>
+   <path d="M160 865 Q420 815 720 865 T1320 850" fill="none" stroke="#f6c928" stroke-opacity=".10" stroke-width="2" stroke-dasharray="5 14"/>
+   <g fill="${planeFill}" stroke="#f6c928" stroke-opacity=".42" stroke-width="1.4">
+    <use href="#b52" transform="translate(250,760) rotate(-8) scale(.55)"/>
+    <use href="#b52" transform="translate(500,820) rotate(7) scale(.38)"/>
+    <use href="#b52" transform="translate(800,750) rotate(-3) scale(.62)"/>
+    <use href="#b52" transform="translate(1090,815) rotate(8) scale(.42)"/>
+    <use href="#b52" transform="translate(1370,755) rotate(-7) scale(.55)"/>
+   </g>
+   <g fill="none" stroke="#e9a33b" stroke-opacity=".32" stroke-width="3">
+    <path d="M250 790 L250 850"/><path d="M800 790 L800 865"/><path d="M1370 790 L1370 850"/>
+   </g>
+ </g>`;
+ if(c.bunker)o+=`<rect y="560" width="1600" height="340" fill="#1a0706"/><path d="M0,560H1600" stroke="#f6c928" stroke-width="4"/><rect x="420" y="640" width="760" height="190" fill="#2a0c08" stroke="#f6c928" stroke-width="4"/><circle cx="800" cy="700" r="220" fill="url(#glow)" opacity=".75"/><rect x="520" y="760" width="560" height="22" fill="#0c0403"/><rect x="570" y="726" width="50" height="34" fill="#0c0403"/><rect x="980" y="726" width="50" height="34" fill="#0c0403"/><path d="M0,735H420M1180,735H1600" stroke="#f6c92855" stroke-width="36"/>`;
+ if(c.fig)o+=`<g transform="translate(1180,610)" fill="#080202"><circle cx="0" cy="0" r="22"/><path d="M-44,-10C-44,-34 -20,-46 0,-46C20,-46 44,-34 44,-10L50,-4L-50,-4Z"/><path d="M-26,24L26,24L36,150L-36,150Z"/><path d="M20,40L120,-90" stroke="#080202" stroke-width="9"/></g>`;
+ if(c.flag)o+=`<g transform="translate(1180,280)"><rect x="-4" y="0" width="8" height="560" fill="#0c0403"/><path d="M4,10C80,-14 160,34 250,8L250,168C160,194 80,146 4,170Z" fill="#c8161d"/>${star(127,90,46,"#f6c928")}</g>`;
+ return o+`</svg>`}
+const sc=$("#scroller"),sel=$("#jump");
+const fm=t=>t.replace(/\*\*(.+?)\*\*/g,(m,a)=>`<b class="k${/B-?52/.test(a)?" f":""}">${a}</b>`);
+const pl=c=>`<svg viewBox="-92 -64 196 176" aria-hidden="true"><g transform="rotate(-28)"><path d="M-8,58C-16,86 -4,100 0,110C4,100 16,86 8,58Z" fill="#ff9a2a"/><path d="M-4,58C-8,76 0,88 0,94C0,88 8,76 4,58Z" fill="#ffe08a"/><g fill="${c}"><path d="M-4,-52L4,-52L5,40L-5,40Z"/><path d="M-4,-8L-78,30L-78,40L-4,18L4,18L78,40L78,30L4,-8Z"/><path d="M-4,38L-22,54L-22,58L-4,50L4,50L22,58L22,54L4,38Z"/></g></g></svg>`;
+function tlBuild(el,s){
+ const tabs=el.querySelector(".tabs"),stage=el.querySelector(".stage"),track=el.querySelector(".tl-track"),n=s.tl.length,cards=[],tb=[];let k=0,sx=null;
+ const z2=v=>String(v).padStart(2,"0");
+ s.tl.forEach((m,j)=>{
+  const t=document.createElement("button");t.type="button";t.className="tab";t.style.setProperty("--d",j);t.textContent="Đêm "+z2(j+1);t.setAttribute("aria-label",m.h);t.onclick=()=>pick(j);tabs.appendChild(t);tb.push(t);
+  const sc2=m.k?`<aside class="score"><div class="n">${m.k.n}</div><div class="l">${m.k.l||"B-52 bị bắn rơi"}</div><div class="pls">${Array.from({length:m.k.n},()=>pl(m.k.t?"#f6c928":"#ff6a3d")).join("")}</div>${m.k.sub?`<div class="sub">${m.k.sub}</div>`:""}</aside>`:"";
+  const c=document.createElement("article");c.className="tc "+(j%2?"up":"dn");
+  c.innerHTML=`<div class="tlcard"><div class="tlhead"><div><div class="tc-kick">${m.s}/1972 · ${m.g||"Ngày đêm thứ "+(j+1)}</div><h3>${m.h}</h3></div><div class="tlbtn"><button type="button" aria-label="Mốc trước">‹</button><button type="button" aria-label="Mốc sau">›</button></div></div><div class="tlbody">${sc2}<div class="tltxt">${m.r?`<p class="res"><span class="rt">★ Thành tích</span><span>${fm(m.r)}</span></p>`:""}${m.p.map(x=>`<p>${fm(x)}</p>`).join("")}${m.z?`<p class="z">${fm(m.z)}</p>`:""}</div></div></div><div class="tc-badge" aria-hidden="true"><b>${z2(j+1)}</b><span>NGÀY</span></div>`;
+  c.onclick=()=>{if(j!==k)pick(j)};
+  const bt=c.querySelectorAll(".tlbtn button");bt[0].onclick=e=>{e.stopPropagation();pick(k-1)};bt[1].onclick=e=>{e.stopPropagation();pick(k+1)};
+  track.appendChild(c);cards.push(c)});
+ function place(imm){const c=cards[k];if(imm)track.style.transition="none";track.style.transform=`translateX(${Math.round(stage.clientWidth/2-(c.offsetLeft+c.offsetWidth/2))}px)`;if(imm){void track.offsetWidth;track.style.transition=""}}
+ function pick(j,imm){k=Math.max(0,Math.min(n-1,j));
+  cards.forEach((c,x)=>{c.classList.toggle("on",x===k);c.classList.toggle("pass",x<k);c.querySelectorAll("button").forEach(b=>b.tabIndex=x===k?0:-1);if(x===k)c.querySelector(".tlcard").scrollTop=0});
+  tb.forEach((t,x)=>{t.classList.toggle("on",x===k);t.classList.toggle("pass",x<k);t.setAttribute("aria-current",x===k?"step":"false")});
+  place(imm);const on=tb[k];tabs.scrollTo({left:on.offsetLeft-tabs.clientWidth/2+on.offsetWidth/2,behavior:imm?"auto":"smooth"})}
+ stage.addEventListener("pointerdown",e=>{sx=e.pointerType==="touch"?e.clientX:null});
+ stage.addEventListener("pointerup",e=>{if(sx===null)return;const dx=e.clientX-sx;sx=null;if(Math.abs(dx)<50)return;if(dx<0){k>=n-1?go(cur+1):pick(k+1)}else{k<=0?go(cur-1):pick(k-1)}});
+ addEventListener("resize",()=>place(true));
+ pick(0,true)}
+S.forEach((s,i)=>{
+ const el=document.createElement("section");el.className="slide"+(s.tl?" tls":"")+(s.cv?" cv":"")+(s.tour?" tour-slide":"")+(s.memo?" memo":"")+(s.solo?" solo":"")+(s.flip?" flip":"")+(s.compact?" compact":"");el.id="s"+i;
+ const rule=`<div class="rule"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon fill="#f6c928" points="50,6 61,38 95,38 67,58 78,92 50,71 22,92 33,58 5,38 39,38"/></svg></div>`;
+ const head=s.notitle||s.tour?"":s.img||s.tl?"":s.q?`<h2 class="qt">${s.t}</h2>`:i?`${s.d?`<span class="date">${s.d}</span>`:""}<h2>${s.t}</h2>`:`<h1>${s.t}<em>${s.sub}</em></h1>`;
+const body=s.q?rule:s.tl?`<div class="tabs"></div><div class="stage"><div class="tl-line"></div><div class="tl-track"></div></div>`:(s.img||s.tour||s.notitle?"":rule)+(s.p||"").split("\n").filter(Boolean).map(x=>x.trim().startsWith("<")?x:`<p>${x}</p>`).join("")+(s.tour?`
+<section class="chapter-tour">
+  <div class="chapter-tour-frame">
+    <iframe ${s.tourSrc?"":'id="tour-embedded"'}
+      src="${s.tourSrc||"index-panoee-export-original.html"}"
+      title="${s.tourTitle||"KHÁM PHÁ HẦM CHỈ HUY T1"}"
+      allow="autoplay; accelerometer; gyroscope; fullscreen; xr-spatial-tracking"
+      loading="${s.tourSrc?"lazy":"eager"}"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+`:"");
+el.innerHTML = scene(s.sc) + ((s.img || s.bg) ? `<div class="photo" style="--photo:url('${s.bg || 'anhnenslide2.jpg'}')"></div>` : "") + (s.memo&&!s.solo?`<div class="memo-img"${s.photo?` style="background-image:url('${s.photo}')"`:""}>${s.photo?"":"<span>Chèn ảnh bác Hiển tại đây<br><small>điền tên file vào photo:\"...\" của trang này</small></span>"}</div>`:"") + `<div class="copy${s.img || s.long ? " long" : ""}${s.memo?" memo-copy":""}">${head}${body}</div>`;
+ sc.appendChild(el);
+
+ if(!s.child) sel.add(new Option(s.n, i));
+ if(s.tl) tlBuild(el, s);
+});
+let cur=0;
+function go(i){i=Math.max(0,Math.min(S.length-1,i));sc.scrollTo({left:i*sc.clientWidth})}
+function upd(){const i=Math.max(0,Math.min(S.length-1,Math.round(sc.scrollLeft/(sc.clientWidth||1))||0));if(i!==cur){cur=i}
+ let hd=cur;while(hd>0&&S[hd]&&S[hd].child)hd--;sel.value=hd;$("#prev").style.visibility=cur?"visible":"hidden";document.querySelectorAll(".tls").forEach(e=>e.classList.toggle("in",e.id==="s"+cur))}
+sc.addEventListener("scroll",upd,{passive:true});
+sel.addEventListener("change",()=>go(+sel.value));
+$("#next").addEventListener("click",()=>go(cur>=S.length-1?0:cur+1));
+$("#prev").addEventListener("click",()=>go(cur-1));
+addEventListener("keydown",e=>{if(["ArrowRight","ArrowDown","PageDown"].includes(e.key)&&e.target.tagName!=="SELECT"){e.preventDefault();go(cur+1)}if(["ArrowLeft","ArrowUp","PageUp"].includes(e.key)&&e.target.tagName!=="SELECT"){e.preventDefault();go(cur-1)}});
+let wl=0;sc.addEventListener("wheel",e=>{if(e.target.closest&&e.target.closest("#t1-room-info-panel"))return;const c=e.target.closest&&e.target.closest(".tlcard,.memo-copy,.compact .copy");if(c&&c.scrollHeight>c.clientHeight+2)return;e.preventDefault();const n=Date.now();if(n-wl<700)return;wl=n;go(cur+((e.deltaY||e.deltaX)>0?1:-1))},{passive:false});
+upd();
+</script>
+</body>
+</html>

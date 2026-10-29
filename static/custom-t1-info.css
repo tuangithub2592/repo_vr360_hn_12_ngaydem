@@ -1,0 +1,258 @@
+/* Small, elevated, semi-transparent information card inspired by the reference UI. */
+#t1-room-info-panel,
+#t1-room-info-panel * { box-sizing: border-box; }
+#t1-room-info-panel {
+  position: absolute;
+  z-index: 10;
+  top: 8px;
+  left: 8px;
+  width: min(350px, calc(100vw - 16px));
+  max-height: calc(100% - 16px);
+  overflow: auto;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgba(17, 27, 37, 0.43);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 7px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  text-align: left;
+  line-height: 1.35;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,.30) transparent;
+}
+#t1-room-info-panel .t1-panel-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 9px 6px;
+}
+#t1-room-info-panel .t1-pin {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background: #c9362d;
+  border: 1.5px solid rgba(255,255,255,.96);
+  box-shadow: 0 0 0 1px rgba(215,61,50,.28);
+}
+#t1-room-info-panel .t1-pin::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #fff;
+  left: 4px;
+  top: 4px;
+}
+#t1-room-info-panel .t1-room-title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  text-shadow: 0 1px 2px rgba(0,0,0,.32);
+}
+#t1-room-info-panel .t1-divider {
+  height: 1px;
+  margin: 0 9px 6px;
+  background: rgba(255,255,255,.70);
+}
+#t1-room-info-panel .t1-room-description {
+  margin: 0;
+  padding: 0 9px 8px;
+  color: rgba(255,255,255,.96);
+  font-size: 12px;
+  line-height: 1.34;
+  overflow-wrap: anywhere;
+  text-shadow: 0 1px 2px rgba(0,0,0,.36);
+}
+#t1-room-info-panel .t1-room-picker {
+  margin: 0 8px 7px;
+  border-top: 1px solid rgba(255,255,255,.14);
+  padding-top: 4px;
+}
+#t1-room-info-panel .t1-room-picker summary {
+  padding: 3px 1px 3px;
+  color: rgba(255,255,255,.82);
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 1.3;
+  user-select: none;
+  outline-offset: 3px;
+}
+#t1-room-info-panel .t1-room-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding-top: 4px;
+}
+#t1-room-info-panel .t1-room-option {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 7px;
+  color: #fff;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease;
+}
+#t1-room-info-panel .t1-room-option:hover,
+#t1-room-info-panel .t1-room-option:focus-visible {
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.48);
+}
+#t1-room-info-panel .t1-room-option[aria-current="true"] {
+  background: rgba(188, 49, 40, .48);
+  border-color: rgba(243,180,169,.78);
+}
+#t1-room-info-panel .t1-option-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: #cc382e;
+}
+#t1-room-info-panel .t1-option-label { flex: 1; min-width: 0; }
+@media (max-width: 600px) {
+  #t1-room-info-panel {
+    left: 7px;
+    width: min(320px, calc(100vw - 14px));
+    border-radius: 6px;
+  }
+  #t1-room-info-panel .t1-panel-head { padding: 7px 8px 5px; }
+  #t1-room-info-panel .t1-room-title { font-size: 14px; }
+  #t1-room-info-panel .t1-divider { margin: 0 8px 5px; }
+  #t1-room-info-panel .t1-room-description { padding: 0 8px 7px; font-size: 11.5px; line-height: 1.32; }
+  #t1-room-info-panel .t1-room-picker { margin: 0 7px 6px; }
+  #t1-room-info-panel .t1-room-options { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #t1-room-info-panel .t1-room-option { transition: none; }
+}
+
+/* Mini map: 2D cross-section of the bunker drawn by custom-t1-info.js. */
+#t1-minimap, #t1-minimap * { box-sizing: border-box; }
+#t1-minimap {
+  position: absolute;
+  z-index: 10;
+  top: 8px;
+  right: 8px;
+  width: 300px;
+  padding: 7px 8px 8px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgba(17, 27, 37, 0.5);
+  border: 1px solid rgba(246, 201, 40, .4);
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+#t1-minimap .t1-mm-title {
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #f6c928;
+  text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+#t1-minimap svg { display: block; width: 100%; height: auto; border-radius: 5px; }
+#t1-minimap text { pointer-events: none; text-anchor: middle; font-family: Arial, Helvetica, sans-serif; }
+
+/* Scenery: night sky, searchlights, layered soil. */
+#t1-minimap .t1-mm-sky { fill: url(#t1mmSky); }
+#t1-minimap .t1-mm-stars circle { fill: #ffe9a0; opacity: .75; }
+#t1-minimap .t1-mm-beam { fill: url(#t1mmBeam); }
+#t1-minimap .t1-mm-soil { fill: url(#t1mmSoil); }
+#t1-minimap .t1-mm-grain { fill: url(#t1mmGrain); }
+#t1mmGrain circle { fill: rgba(0, 0, 0, .28); }
+#t1-minimap .t1-mm-strata { fill: none; stroke: rgba(255, 220, 170, .12); stroke-width: .7; }
+#t1-minimap .t1-mm-grass { fill: #5f8f3a; }
+#t1-minimap .t1-mm-tree rect { fill: #5b3a1e; }
+#t1-minimap .t1-mm-tree circle { fill: #4f7f30; stroke: #2f5a1c; stroke-width: .4; }
+#t1-minimap .t1-mm-portal { fill: #8a8478; stroke: #3a3530; stroke-width: .5; }
+#t1-minimap .t1-mm-door { fill: #140606; }
+
+/* Concrete shell, shaft and stairs. */
+#t1-minimap .t1-mm-shell { fill: url(#t1mmShell); stroke: #3a3530; stroke-width: .6; }
+#t1-minimap .t1-mm-hall { fill: #24160d; }
+#t1-minimap .t1-mm-rung { stroke: #a89c86; stroke-width: .7; }
+#t1-minimap .t1-mm-stair { fill: #2a180c; stroke: #a89c86; stroke-width: .6; stroke-linejoin: round; }
+#t1-minimap .t1-mm-tread { stroke: rgba(233, 211, 160, .45); stroke-width: .6; }
+#t1-minimap .t1-mm-exit { pointer-events: none; }
+
+/* Rooms. */
+#t1-minimap .t1-mm-box { fill: url(#t1mmRoom); stroke: rgba(246, 201, 40, .35); stroke-width: .6; transition: stroke .2s ease; }
+#t1-minimap .t1-mm-lamp { fill: #ffd34a; opacity: .85; }
+#t1-minimap .t1-mm-label { font-size: 7px; font-weight: 700; fill: #fff1c9; }
+#t1-minimap .t1-mm-small { font-size: 5.6px; }
+#t1-minimap .t1-mm-badge circle { fill: #b3141b; stroke: #f6c928; stroke-width: .6; }
+#t1-minimap .t1-mm-badge text { font-size: 5.5px; font-weight: 700; fill: #fff; }
+
+/* Interaction: hover, keyboard focus, current room glows gold. */
+#t1-minimap .t1-mm-room { cursor: pointer; outline: none; }
+#t1-minimap .t1-mm-room:hover .t1-mm-box,
+#t1-minimap .t1-mm-room:hover .t1-mm-stair { stroke: #f6c928; }
+#t1-minimap .t1-mm-room:focus-visible .t1-mm-box,
+#t1-minimap .t1-mm-room:focus-visible .t1-mm-stair { stroke: #fff; stroke-width: 1.2; }
+#t1-minimap .t1-mm-room[aria-current="true"] { animation: t1mmGlow 2s ease-in-out infinite; }
+#t1-minimap .t1-mm-room[aria-current="true"] .t1-mm-box { fill: url(#t1mmOn); stroke: #fff3c4; }
+#t1-minimap .t1-mm-room[aria-current="true"] .t1-mm-label { fill: #3a0807; }
+#t1-minimap .t1-mm-room[aria-current="true"] .t1-mm-stair { fill: rgba(246, 201, 40, .55); stroke: #fff3c4; }
+#t1-minimap .t1-mm-room[aria-current="true"] .t1-mm-tread { stroke: rgba(58, 8, 7, .55); }
+#t1-minimap .t1-mm-room[aria-current="true"] .t1-mm-badge circle { fill: #f6c928; stroke: #3a0807; }
+#t1-minimap .t1-mm-room[aria-current="true"] .t1-mm-badge text { fill: #3a0807; }
+@keyframes t1mmGlow {
+  0%, 100% { filter: drop-shadow(0 0 1.5px rgba(246, 201, 40, .6)); }
+  50% { filter: drop-shadow(0 0 4px rgba(246, 201, 40, .95)); }
+}
+
+/* Visit route, marching dashes. */
+#t1-minimap .t1-mm-route {
+  fill: none;
+  stroke: #ff6a3d;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 2.5 2.5;
+  pointer-events: none;
+  animation: t1mmRoute 1.4s linear infinite;
+}
+@keyframes t1mmRoute { to { stroke-dashoffset: -10; } }
+
+/* Text labels on the scene. */
+#t1-minimap .t1-mm-tag,
+#t1-minimap .t1-mm-zone { font-weight: 700; paint-order: stroke; stroke: rgba(20, 6, 5, .85); stroke-width: 1.2px; }
+#t1-minimap .t1-mm-tag { font-size: 6.2px; fill: #f6c928; }
+#t1-minimap .t1-mm-zone { font-size: 5.2px; letter-spacing: .25em; fill: rgba(255, 241, 201, .6); }
+#t1-minimap .t1-mm-zone-top { fill: rgba(200, 230, 160, .8); }
+
+@media (max-width: 600px) {
+  #t1-minimap { width: 170px; padding: 5px; }
+  #t1-minimap .t1-mm-title { font-size: 9px; }
+  #t1-minimap .t1-mm-label, #t1-minimap .t1-mm-zone { display: none; }
+  #t1-room-info-panel { width: min(320px, calc(100% - 192px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #t1-minimap .t1-mm-route, #t1-minimap .t1-mm-room[aria-current="true"] { animation: none; }
+  #t1-minimap .t1-mm-box { transition: none; }
+}

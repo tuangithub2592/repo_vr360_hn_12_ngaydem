@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bảo tàng Chiến thắng B-52 — Tour 360° có thuyết minh</title>
+<!-- Narration card reuses the T1 tour panel styles so both tours look the same. -->
+<link rel="stylesheet" href="../../static/custom-t1-info.css?v=10">
+<style>
+  *{box-sizing:border-box}
+  html,body{width:100%;height:100%;margin:0;background:#080b10;color:#f5f7fa;font-family:Arial,Helvetica,sans-serif;overflow:hidden}
+  .topbar{height:50px;display:flex;align-items:center;gap:12px;padding:0 14px;background:#17191d;border-bottom:1px solid #34383d;position:relative;z-index:5}
+  .brand{font-size:14px;font-weight:700;flex:1}
+  .hint{font-size:12px;color:#d2d5d9}
+  button,a{border:1px solid #62676e;background:#292d32;color:#fff;padding:8px 11px;border-radius:6px;font-size:12px;text-decoration:none;cursor:pointer}
+  button:hover,a:hover{background:#41464d}
+  .workspace{position:relative;width:100%;height:calc(100% - 50px)}
+  iframe{display:block;width:100%;height:100%;border:0;background:#111}
+  @media(max-width:720px){
+    .topbar{height:46px;padding:0 8px;gap:6px}.brand{font-size:11px}.hint{display:none}.topbar button,.topbar a{padding:7px;font-size:11px}
+    .workspace{height:calc(100% - 46px)}
+    /* No mini map here, so keep the full card width the T1 sheet narrows on phones. */
+    #t1-room-info-panel{width:min(320px,calc(100vw - 14px))}
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">BẢO TÀNG CHIẾN THẮNG B-52 · TOUR 360°</div>
+  <div class="hint">Kéo chuột để xoay · Lăn chuột để phóng to/thu nhỏ · Chọn không gian để đọc thuyết minh</div>
+  <button id="fullBtn" type="button">Toàn màn hình</button>
+  <a href="https://tour.panoee.net/iframe/6adaffb2d0c79fd855bf0787?embedFullscreen=1&embedVr=1&embedGyro=1" target="_blank" rel="noopener">Mở tour riêng</a>
+</header>
+<main class="workspace" id="workspace">
+  <iframe id="tour-b52" title="Bảo tàng Chiến thắng B52" src="../../index-panoee-export-b52.html" allow="autoplay; accelerometer; gyroscope; fullscreen; xr-spatial-tracking" loading="eager" allowfullscreen></iframe>
+  <aside id="t1-room-info-panel" role="region" aria-label="Thông tin khu trưng bày Bảo tàng Chiến thắng B-52">
+    <div class="t1-panel-head"><span class="t1-pin" aria-hidden="true"></span><h2 class="t1-room-title"></h2></div>
+    <div class="t1-divider" aria-hidden="true"></div>
+    <p class="t1-room-description" aria-live="polite"></p>
+    <details class="t1-room-picker">
+      <summary>Chọn nội dung thuyết minh</summary>
+      <div class="t1-room-options"></div>
+    </details>
+  </aside>
+</main>
+<script>
+const spaces = [
+  {
+    sceneId: "6adaffdad0c79fd855bf09f9",
+    title: "Khuôn viên bảo tàng",
+    text: "Giữa lòng Hà Nội hôm nay, Bảo tàng Chiến thắng B-52 hiện diện như một dấu mốc nhắc nhớ về 12 ngày đêm khốc liệt cuối năm 1972. Không chỉ lưu giữ những chứng tích của chiến tranh, nơi đây còn tái hiện một phần cuộc đối đầu trên bầu trời Hà Nội - nơi quân và dân Thủ đô đã kiên cường chiến đấu, góp phần làm nên chiến thắng “Điện Biên Phủ trên không”."
+  },
+  {
+    sceneId: "6adb16fed0c79fd855c0f553",
+    title: "Khu trưng bày ngoài trời",
+    text: "Bước vào khu trưng bày ngoài trời, những hiện vật chiến tranh có kích thước lớn đưa câu chuyện lịch sử từ những trang sách trở về với không gian thực. Nổi bật là xác chiếc máy bay B-52 bị bắn rơi tại Hà Nội cùng nhiều loại vũ khí, khí tài phòng không - không quân. Mỗi hiện vật không chỉ là dấu tích của một trận chiến, mà còn ghi lại sức mạnh và ý chí của quân dân Việt Nam trong những ngày tháng quyết liệt năm 1972."
+  },
+  {
+    sceneId: "6adb12fab4d45c7f0fe9d84f",
+    title: "Khu trưng bày trong nhà",
+    text: "Bên trong bảo tàng là không gian tái hiện hành trình của cuộc chiến đấu chống chiến tranh phá hoại bằng không quân của Mỹ, đặc biệt là chiến dịch 12 ngày đêm tháng 12 năm 1972. Qua hệ thống hình ảnh, hiện vật, tài liệu và sa bàn, người xem có thể theo dõi diễn biến chiến dịch, tìm hiểu cách quân dân Hà Nội tổ chức phòng không, đánh trả các đợt tập kích và từng bước làm nên chiến thắng trên bầu trời Thủ đô."
+  }
+];
+// Same markup and behaviour as the T1 panel (static/custom-t1-info.js).
+const panel=document.getElementById('t1-room-info-panel');
+const options=panel.querySelector('.t1-room-options');
+function selectSpace(index){
+  const item=spaces[index];
+  panel.querySelector('.t1-room-title').textContent=item.title;
+  panel.querySelector('.t1-room-description').textContent=item.text;
+  options.querySelectorAll('.t1-room-option').forEach((b,i)=>b.setAttribute('aria-current',String(i===index)));
+}
+spaces.forEach((item,i)=>{
+  const b=document.createElement('button');
+  b.type='button';
+  b.className='t1-room-option';
+  b.innerHTML='<span class="t1-option-dot" aria-hidden="true"></span><span class="t1-option-label"></span>';
+  b.querySelector('.t1-option-label').textContent=item.title;
+  b.addEventListener('click',()=>{selectSpace(i);goToScene(item);});
+  options.appendChild(b);
+});
+// The tour is the self-hosted Panoee export (same origin), driven the same
+// way as the T1 tour in static/custom-t1-info.js:
+// - panel -> tour: tap the matching item in Panoee's scene list;
+// - tour -> panel: follow the ?scene=<id> Panoee writes into its URL.
+const TOUR_PAGE='../../index-panoee-export-b52.html';
+const tour=document.getElementById('tour-b52');
+function viewerHref(){
+  try{return tour.contentDocument?tour.contentDocument.location.href:'';}catch(e){return '';}
+}
+// Flickity only reacts to a pointerdown/pointerup pair. On touch browsers it
+// ignores synthetic mouse events, so if the scene has not changed shortly
+// after, reload the export on that scene (it reads ?scene=<id> on load).
+// ponytail: the fallback costs a full tour reload (a few seconds).
+function goToScene(item){
+  if(viewerHref().indexOf(item.sceneId)!==-1) return;
+  const doc=tour.contentDocument;
+  const scene=doc&&[...doc.querySelectorAll('#themeListScene .itemScene')].find(el=>el.textContent.trim()===item.title);
+  if(scene){
+    const win=doc.defaultView,r=scene.getBoundingClientRect();
+    const o={bubbles:true,cancelable:true,clientX:r.left+5,clientY:r.top+5,pointerId:1,pointerType:'mouse',isPrimary:true,button:0};
+    ['pointerdown','mousedown','pointerup','mouseup','click'].forEach(type=>
+      scene.dispatchEvent(new (type.indexOf('pointer')===0?win.PointerEvent:win.MouseEvent)(type,o)));
+  }
+  setTimeout(()=>{
+    if(viewerHref().indexOf(item.sceneId)===-1) tour.src=TOUR_PAGE+'?scene='+item.sceneId;
+  },900);
+}
+// ponytail: 500 ms polling; the Panoee router emits no event we can hook.
+let lastIndex=0;
+setInterval(()=>{
+  const href=viewerHref();
+  const i=spaces.findIndex(s=>href.indexOf(s.sceneId)!==-1);
+  if(i!==-1&&i!==lastIndex){lastIndex=i;selectSpace(i);}
+},500);
+selectSpace(0);
+const workspace=document.getElementById('workspace');
+document.getElementById('fullBtn').addEventListener('click',async()=>{
+  try{
+    if(!document.fullscreenElement) await workspace.requestFullscreen();
+    else await document.exitFullscreen();
+  }catch(e){
+    window.open(document.getElementById('tour-b52').src,'_blank','noopener');
+  }
+});
+</script>
+</body>
+</html>
