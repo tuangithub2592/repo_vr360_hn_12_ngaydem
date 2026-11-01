@@ -382,6 +382,8 @@ h1 em{display:block;font-style:normal;color:var(--gold);font-size:.62em;margin-t
 
 /* T1 info panel lives inside the VR360 slide frame. */
 .chapter-tour-frame { position: relative; }
+.chapter-video{width:min(1100px,92vw);margin:0 auto}
+.chapter-video video{display:block;width:100%;max-height:calc(100svh - 150px);border-radius:10px;background:#000;box-shadow:0 10px 30px rgba(0,0,0,.6)}
 
 /* Chương 4 – trang con: chữ nằm bên phải, chừa khoảng trái cho ảnh bác Hiển */
 .slide.memo{place-items:center end;padding:clamp(84px,12vh,120px) clamp(96px,9vw,150px) clamp(28px,5vh,56px) clamp(96px,9vw,150px)}
@@ -423,6 +425,7 @@ const S=[
 {n:"Bối cảnh",child:1,notitle:1,img:true,p:"Năm 1972, khi đàm phán hòa bình tại Paris rơi vào bế tắc, chính quyền Tổng thống Mỹ Richard Nixon mở chiến dịch tập kích đường không chiến lược Linebacker II nhằm gây sức ép buộc Việt Nam Dân chủ Cộng hòa chấp nhận các điều kiện đàm phán của Mỹ. Hà Nội và Hải Phòng trở thành những mục tiêu trọng điểm của chiến&nbsp;dịch.\nTháng 12/1972, Hà Nội bước vào một trong những thời khắc khốc liệt nhất của cuộc kháng chiến chống Mỹ. Trong 12 ngày đêm, từ ngày 18 đến ngày 29/12, quân đội Mỹ sử dụng máy bay B-52 cùng nhiều loại máy bay chiến thuật tập kích Hà Nội, Hải Phòng và một số địa phương miền Bắc, gây tổn thất nặng nề về người và tài sản.\nNhưng câu chuyện ấy không chỉ diễn ra trên bầu trời. Phía sau các trận đánh là hoạt động chỉ huy căng thẳng và những chứng tích chiến tranh còn được lưu giữ đến hôm&nbsp;nay.",sc:{}},
 {n:"Câu hỏi mở",child:1,notitle:1,p:"<p class=\"big-question\">Điều gì đã diễn ra phía sau những trận đánh trên bầu trời Hà Nội suốt 12 ngày đêm, những chứng tích lịch sử hiện còn lại đã viết lại câu chuyện ấy như thế&nbsp;nào?</p>",sc:{}},
 {n:"Chương 1: Hầm tác chiến T1",bg:"hamt1backslide.jpg",d:"Chương 1 · Tối 18/12/1972",t:"Hầm tác chiến T1 – Những đêm không ngủ dưới lòng đất",p:"Dưới lòng Hoàng thành Thăng Long có căn hầm chỉ huy tác chiến T1 của Bộ Tổng Tham mưu. Tối 18/12/1972, những hồi còi báo động đầu tiên cho toàn thành phố được phát đi từ đây, trước khi B-52 tới khoảng 35 phút. Suốt 12 ngày đêm, cán bộ và chiến sĩ trực ban ở đây gần như không chợp mắt.",sc:{beams:4,tr:3,bunker:1}},
+{n:"Video: Hầm tác chiến T1",child:1,notitle:1,video:"video/video_vr360.mp4",p:"",sc:{}},
 {n:"Trải nghiệm VR360: Hầm tác chiến T1",d:"Chương 1 · Trải nghiệm không gian 360°",t:"Khám phá hầm chỉ huy T1",p:"",tour:true,sc:{}},
 {n:"Chương 2: 12 ngày đêm trên bầu trời Hà Nội",d:"Chương 2 · Diễn biến lịch sử",t:"12 ngày đêm trên bầu trời Hà Nội",p:"",cv:1,sc:{beams:8,planes:[[560,170,.8,6],[1250,120,.6,-6]],tr:14,burst:1,fall:1}},
 {n:"Chương 2: Dòng thời gian 12 ngày đêm",child:1,d:"Diễn biến lịch sử · 18 – 29/12/1972",t:"Dòng thời gian 12 ngày đêm",p:"",tl:[
@@ -467,7 +470,7 @@ const $=(s,r=document)=>r.querySelector(s);
 const star=(x,y,r,f)=>{let p=[];for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,q=i%2?r*.382:r;p.push((x+q*Math.cos(a)).toFixed(1)+","+(y+q*Math.sin(a)).toFixed(1))}return `<polygon fill="${f}" points="${p.join(" ")}"/>`};
 const defs=`<defs>
 <linearGradient id="skyN" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b0303"/><stop offset=".6" stop-color="#3a0807"/><stop offset="1" stop-color="#8f1a12"/></linearGradient>
-<linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7d0f14"/><stop offset=".55" stop-color="#d4421a"/><stop offset="1" stop-color="#f6c928"/></linearGradient>
+<linearGradient id="skyD" x1="0" y1="0"đ x2="0" y2="1"><stop offset="0" stop-color="#7d0f14"/><stop offset=".55" stop-color="#d4421a"/><stop offset="1" stop-color="#f6c928"/></linearGradient>
 <linearGradient id="bm" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffe9a0" stop-opacity=".7"/><stop offset="1" stop-color="#ffe9a0" stop-opacity=".04"/></linearGradient>
 <radialGradient id="glow"><stop offset="0" stop-color="#ffb43a" stop-opacity=".9"/><stop offset="1" stop-color="#ff5a1a" stop-opacity="0"/></radialGradient>
 <g id="b52"><path d="M-4,-52L4,-52L5,40L-5,40Z"/><path d="M-4,-8L-78,30L-78,40L-4,18L4,18L78,40L78,30L4,-8Z"/><path d="M-4,38L-22,54L-22,58L-4,50L4,50L22,58L22,54L4,38Z"/></g></defs>`;
@@ -539,7 +542,7 @@ const body=s.q?rule:s.tl?`<div class="tabs"></div><div class="stage"><div class=
     </iframe>
   </div>
 </section>
-`:"");
+`:"")+(s.video?`<div class="chapter-video"><video src="${s.video}" controls playsinline preload="metadata"></video></div>`:"");
 el.innerHTML = scene(s.sc) + ((s.img || s.bg) ? `<div class="photo" style="--photo:url('${s.bg || 'anhnenslide2.jpg'}')"></div>` : "") + (s.memo&&!s.solo?`<div class="memo-img"${s.photo?` style="background-image:url('${s.photo}')"`:""}>${s.photo?"":"<span>Chèn ảnh bác Hiển tại đây<br><small>điền tên file vào photo:\"...\" của trang này</small></span>"}</div>`:"") + `<div class="copy${s.img || s.long ? " long" : ""}${s.memo?" memo-copy":""}">${head}${body}</div>`;
  sc.appendChild(el);
 
@@ -549,7 +552,7 @@ el.innerHTML = scene(s.sc) + ((s.img || s.bg) ? `<div class="photo" style="--pho
 let cur=0;
 function go(i){i=Math.max(0,Math.min(S.length-1,i));sc.scrollTo({left:i*sc.clientWidth})}
 function upd(){const i=Math.max(0,Math.min(S.length-1,Math.round(sc.scrollLeft/(sc.clientWidth||1))||0));if(i!==cur){cur=i}
- let hd=cur;while(hd>0&&S[hd]&&S[hd].child)hd--;sel.value=hd;$("#prev").style.visibility=cur?"visible":"hidden";document.querySelectorAll(".tls").forEach(e=>e.classList.toggle("in",e.id==="s"+cur))}
+ let hd=cur;while(hd>0&&S[hd]&&S[hd].child)hd--;sel.value=hd;$("#prev").style.visibility=cur?"visible":"hidden";document.querySelectorAll(".tls").forEach(e=>e.classList.toggle("in",e.id==="s"+cur));document.querySelectorAll("video").forEach(v=>{if(!v.closest("#s"+cur))v.pause()})}
 sc.addEventListener("scroll",upd,{passive:true});
 sel.addEventListener("change",()=>go(+sel.value));
 $("#next").addEventListener("click",()=>go(cur>=S.length-1?0:cur+1));
